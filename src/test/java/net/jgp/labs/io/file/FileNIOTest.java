@@ -10,7 +10,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class FileIOTest {
+public class FileNIOTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -32,7 +32,7 @@ public class FileIOTest {
 	public void test() {
 		StringBuffer sb;
 		try {
-			sb = FileIO.fileToStringBuffer("/etc/hosts");
+			sb = FileNIO.fileToStringBuffer(Paths.get("/etc/hosts"));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
