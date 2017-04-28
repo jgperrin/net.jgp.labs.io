@@ -32,10 +32,12 @@ public class FileListerTest {
 	@Test
 	public void test() {
 		FileLister fl = new FileLister();
-		fl.setPath("/Users/jgp/Pictures/All Photos/");
+		fl.setPath("/Users/jgp/Pictures/All Photos/2010-2019/");
 		fl.addExtensionFilter("jpg");
 		fl.addExtensionFilter("jpeg");
+		fl.setRecursive();
 		List<File> list = fl.list();
+		System.out.println(list.size());
 		for (File f: list) {
 			System.out.println(f);
 		}
